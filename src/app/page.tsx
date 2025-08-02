@@ -26,13 +26,13 @@ export default function UserDashboard() {
     setSelectedUser(null);
   };
 
-  const getSearchResultText = () => {
-    if (!searchTerm) return "";
-    const label = searchOptions.find(
-      (opt) => opt.value === searchCriteria
-    )?.label;
-    return `نتایج جستجو در ${label} برای: "${searchTerm}"`;
-  };
+  // const getSearchResultText = () => {
+  //   if (!searchTerm) return "";
+  //   const label = searchOptions.find(
+  //     (opt) => opt.value === searchCriteria
+  //   )?.label;
+  //   return `نتایج جستجو در ${label} برای: "${searchTerm}"`;
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 md:p-6 lg:p-8">
@@ -58,11 +58,11 @@ export default function UserDashboard() {
               <Users className="h-4 w-4 mr-1" />
               {filteredUsers.length} کاربر
             </Badge>
-            {searchTerm && (
+            {/* {searchTerm && (
               <Badge variant="outline" className="text-sm px-3 py-1" dir="rtl">
                 {getSearchResultText()}
               </Badge>
-            )}
+            )} */}
           </div>
         </div>
 
